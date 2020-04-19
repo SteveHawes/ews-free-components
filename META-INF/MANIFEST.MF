@@ -4,3 +4,6 @@ Bundle-SymbolicName: ewsfreecomponents
 Package-Type: Web-Component
 Bundle-Version: 1.0.0
 
+Name: falayericon/falayericon.spec
+Web-Component: True
+
