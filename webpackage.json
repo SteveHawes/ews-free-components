@@ -8,5 +8,6 @@
     "sourceUrl" : "https://github.com/SteveHawes/ews-free-components",
     "releases" : [
     	{"version":"1.0.0","url":"https://github.com/SteveHawes/ews-free-components/releases/download/V1.0.0/ews-free-components.zip", "servoy-version":"8.4.0", "dependency":"fontawesome#>=5.13.0"}
+    	{"version":"1.0.1","url":"https://github.com/SteveHawes/ews-free-components/releases/download/V1.0.1/ews-free-components.zip", "servoy-version":"8.4.0", "dependency":"fontawesome#>=5.13.0"}
 	]
 }
