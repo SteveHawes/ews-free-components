@@ -1,0 +1,12 @@
+{
+    "name":"ewsfreecomponents",
+    "displayName":"EWS Free Components",
+    "packageType": "Web-Component",
+    "icon": "https://raw.githubusercontent.com/SteveHawes/ews-free-components/master/ews.png",
+    "description": "A set of free components including the FA Layer Icon",
+    "wikiUrl": "https://github.com/SteveHawes/ews-free-components/wiki",
+    "sourceUrl" : "https://github.com/SteveHawes/ews-free-components",
+    "releases" : [
+    	{"version":"1.0.0","url":"https://github.com/SteveHawes/ews-free-components/releases/download/V1.0.0/ews-free-components.zip"}
+	]
+}
