@@ -3,6 +3,7 @@
 	"displayName": "FontAwesome Layering Icon",
 	"version": 1,
 	"definition": "ewsfreecomponents/falayericon/falayericon.js",
+	"icon": "ewsfreecomponents/falayericon/falayericon.png",
 	"libraries": [
 	],
 	"model": {
