@@ -3,6 +3,7 @@
 	"displayName": "Gauge",
 	"version": 1,
 	"definition": "ewsfreecomponents/gauge/gauge.js",
+	"icon": "ewsfreecomponents/gauge/gauge.png",
 	"libraries": 
 	[
 		{
