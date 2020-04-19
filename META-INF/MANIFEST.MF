@@ -7,3 +7,6 @@ Bundle-Version: 1.0.0
 Name: falayericon/falayericon.spec
 Web-Component: True
 
+Name: gauge/gauge.spec
+Web-Component: True
+
