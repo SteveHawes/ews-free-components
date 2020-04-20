@@ -11,7 +11,7 @@ angular.module('ewsfreecomponentsGauge',['servoy']).directive('ewsfreecomponents
 
 			$scope.refreshGauge = function() {
 				angular.element(document).ready(function() {
-					$scope.target = document.getElementById('canvas-preview_' + $scope.model.svyMarkupId); // your canvas element
+					$scope.target = $element.find('.gauge-canvas')[0];
 					if($scope.model.options.colorPercentages != null) {
 						$scope.model.options.percentColors = [];
 						$scope.model.options.colorPercentages.forEach(function(element) {
@@ -26,10 +26,10 @@ angular.module('ewsfreecomponentsGauge',['servoy']).directive('ewsfreecomponents
 					} else if ($scope.model.gaugeType == "gauge") {
 						$scope.gauge = new Gauge($scope.target).setOptions($scope.model.options);
 					}
+					$scope.gauge.setTextField($element.find('.gauge-textfield')[0]);
 					$scope.gauge.set($scope.model.value);
 					$scope.gauge.maxValue = $scope.model.options.maxValue;
 					$scope.gauge.animationSpeed = $scope.model.options.animationSpeed;
-					$scope.gauge.setTextField(document.getElementById('preview-textfield_' + $scope.model.svyMarkupId));
 				});
 			}
 

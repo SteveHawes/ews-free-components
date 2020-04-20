@@ -16,7 +16,9 @@
 
 	"model": {
 		"options": {
-			"type": "gaugeOptions"
+			"type": "gaugeOptions",
+			"default": {
+			}
 		},
 
 		"title": {
