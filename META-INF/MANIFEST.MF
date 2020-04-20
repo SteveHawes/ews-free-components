@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-Name: EWS Free Components
 Bundle-SymbolicName: ewsfreecomponents
 Package-Type: Web-Component
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.1
 
 Name: falayericon/falayericon.spec
 Web-Component: True
