@@ -1,8 +1,8 @@
 <div id="falayericon_{{::model.svyMarkupId}}" class="ews-falayericon {{model.styleClass}}">
 	<span class="fa-layers fa-fw">
-		<span ng-repeat="layer in model.layers">
+		<span ng-repeat="layer in model.layers" ng-hide="layer.hide">
 	    <i ng-if="!layer.layerType || layer.layerType === 'icon'" ng-class="layer.layerStyleClass" data-fa-transform="{{layer.transform}}" ng-style="(layer.color != null) ? {'color':layer.color} : {}"></i>
-	    <span ng-if="layer.layerType === 'text'" class="fa-layers-text" ng-class="layer.layerStyleClass" data-fa-transform="{{layer.transform}}" ng-style="(layer.color != null) ? {'color':layer.color} : {}">{{layer.iconText}}</span>
+	    <span ng-if="layer.layerType === 'text'" class="fa-layers-text" ng-class="layer.layerStyleClass" data-fa-transform="{{layer.transform}}" ng-style="(layer.color != null) ? {'color':layer.color} : {}" ng-bind-html="((layer.iconTextExpression == null) ? layer.iconText : layer.iconTextExpression)"></span>
 	    <span ng-if="layer.layerType === 'counter'" class="fa-layers-counter" ng-class="layer.layerStyleClass" data-fa-transform="{{layer.transform}}" ng-style="(layer.color != null) ? {'color':layer.color} : {}">{{layer.iconCounter}}</span>
 		</span>
 	</span>

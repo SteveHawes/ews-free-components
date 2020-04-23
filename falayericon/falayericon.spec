@@ -85,6 +85,26 @@
 		}
 	},
 
+	"api": {
+		"hideLayer": {
+			"parameters": [
+				{
+					"name": "layerNo",
+					"type": "int"
+				}
+			]
+		},
+
+		"showLayer": {
+			"parameters": [
+				{
+					"name": "layerNo",
+					"type": "int"
+				}
+			]
+		}
+	},
+	
 	"types": {
 		"layer": {
 			"layerType": {
@@ -134,7 +154,9 @@
 
 			"transform": {
 				"type": "string"
-			}
+			},
+			
+			"hide": "boolean"
 		}
 	}
 }
