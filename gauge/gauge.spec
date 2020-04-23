@@ -218,10 +218,9 @@
 					"doc": "The type of animation behaviour for the guage"
 				},
 
-				"default": "cycle",
+				"default": "linear",
 				"values": 
 				[
-					"linear",
 					"quad",
 					"quint",
 					"cycle",
@@ -254,7 +253,7 @@
 					"doc": "Flag to indicate if the guage should be animated on first draw"
 				},
 
-				"default": "false"
+				"default": true
 			}
 		},
 

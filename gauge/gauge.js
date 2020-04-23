@@ -26,38 +26,28 @@ angular.module('ewsfreecomponentsGauge', ['servoy']).directive('ewsfreecomponent
 							units: $scope.model.units,
 							title: $scope.getTitleText()
 						}
-						if ($scope.model.gaugeType == "radial") {
-							$scope.gauge = new RadialGauge(options);
-							if($scope.model.radialGaugeOptions) $scope.gauge.update($scope.model.radialGaugeOptions)
-						} else if ($scope.model.gaugeType == "linear") {
-							$scope.gauge = new LinearGauge(options);
-							if($scope.model.linearGaugeOptions) $scope.gauge.update($scope.model.linearGaugeOptions)
-						}
+						if($scope.model.animationOptions) Object.assign(options, $scope.model.animationOptions);
 						if($scope.model.highlights) {
 							$scope.model.ticks = $scope.model.ticks || {};
 							$scope.model.ticks.highlights = $scope.model.highlights;
 						}
 						if($scope.model.ticks) {
-							$scope.gauge.update($scope.model.ticks);
+							Object.assign(options, $scope.model.ticks);
 						}
-						if($scope.model.animationOptions) $scope.gauge.update($scope.model.animationOptions);
-						if($scope.model.colorOptions) $scope.gauge.update($scope.model.colorOptions);
-						if($scope.model.valueBoxOptions) $scope.gauge.update($scope.model.valueBoxOptions);
-						if($scope.model.needleOptions) $scope.gauge.update($scope.model.needleOptions);
-						if($scope.model.borderOptions) $scope.gauge.update($scope.model.borderOptions);
-						if($scope.model.fontOptions) $scope.gauge.update($scope.model.fontOptions);
-						$scope.gauge.value = $scope.model.value;
-						
-//						var gaugeHeight = $apifunctions.getHeight($element[0])();
-//						var gaugeWidth = $apifunctions.getWidth($element[0])();
-//						var textHeight = $apifunctions.getHeight($element.children().first().children().last().children().first()[0])();
-//						var canvasHeight = Math.max(1, (gaugeHeight - textHeight - 5));
-//						$scope.gauge.update({ height: canvasHeight });
-//						$scope.gauge.update({ width: gaugeWidth });
-						$timeout(function() {
-							$scope.resize();
-							$scope.gauge.draw();
-						}, 250);
+						if($scope.model.colorOptions) Object.assign(options, $scope.model.colorOptions);
+						if($scope.model.valueBoxOptions) Object.assign(options, $scope.model.valueBoxOptions);
+						if($scope.model.needleOptions) Object.assign(options, $scope.model.needleOptions);
+						if($scope.model.borderOptions) Object.assign(options, $scope.model.borderOptions);
+						if($scope.model.fontOptions) Object.assign(options, $scope.model.fontOptions);
+
+						if ($scope.model.gaugeType == "radial") {
+							if($scope.model.radialGaugeOptions) Object.assign(options, $scope.model.radialGaugeOptions)
+							$scope.gauge = new RadialGauge(options);
+						} else if ($scope.model.gaugeType == "linear") {
+							if($scope.model.linearGaugeOptions) Object.assign(options, $scope.model.linearGaugeOptions)
+							$scope.gauge = new LinearGauge(options);
+						}
+						$scope.gauge.draw();
 					});
 				}
 				
@@ -77,6 +67,7 @@ angular.module('ewsfreecomponentsGauge', ['servoy']).directive('ewsfreecomponent
 					var canvasHeight = Math.max(1, (gaugeHeight - 10));
 					$scope.gauge.update({ height: canvasHeight });
 					$scope.gauge.update({ width: gaugeWidth });
+					$scope.gauge.draw();
 				}
 
 				var resizeTimeout = null;
@@ -94,10 +85,6 @@ angular.module('ewsfreecomponentsGauge', ['servoy']).directive('ewsfreecomponent
 
 				$(window).on('resize', windowResizeHandler);
 				$scope.$on("dialogResize", windowResizeHandler);
-
-				$scope.api.setValue = function(_value) {
-					$scope.gauge.set(_value)
-				}
 
 			},
 			link: function($scope, $element, $attrs) {
