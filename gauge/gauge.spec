@@ -119,7 +119,17 @@
 				"tags": 
 				{
 					"doc": "An array of numeric or string values which will be displayed on a gauge bar as major ticks. This array values define the labels for the ticks. The length of the array defines a number of sections on a ticks bar."
-				}
+				},
+
+				"default": 
+				[
+					"0",
+					"20",
+					"40",
+					"60",
+					"80",
+					"100"
+				]
 			},
 
 			"majorTicksInt": 
@@ -147,6 +157,7 @@
 				{
 					"doc": "How many divisions to draw between two neighbour major ticks."
 				},
+
 				"default": 10
 			},
 
@@ -167,6 +178,7 @@
 				{
 					"doc": "Sets the width of highlights area in relative units"
 				},
+
 				"default": 15
 			}
 		},
@@ -197,6 +209,7 @@
 				{
 					"doc": "Flag to indicate if animations are enabled"
 				},
+
 				"default": true
 			},
 
@@ -207,6 +220,7 @@
 				{
 					"doc": "Time in milliseconds of the animation duration"
 				},
+
 				"default": 500
 			},
 
@@ -266,6 +280,7 @@
 				{
 					"doc": "The background color for the gauge"
 				},
+
 				"default": "#fff"
 			},
 
@@ -285,6 +300,7 @@
 				{
 					"doc": "Color of the major tick marks"
 				},
+
 				"default": "#444"
 			},
 
@@ -295,6 +311,7 @@
 				{
 					"doc": "Color of the minor tick marks"
 				},
+
 				"default": "#666"
 			},
 
@@ -305,8 +322,8 @@
 				{
 					"doc": "Color of the numbers on the ticks"
 				},
+
 				"default": "#444"
-				
 			},
 
 			"colorNeedle": 
@@ -316,6 +333,7 @@
 				{
 					"doc": "Color of the needle"
 				},
+
 				"default": "rgba(240,128,128,1)"
 			},
 
@@ -326,6 +344,7 @@
 				{
 					"doc": "This value and the main needle colour can be used to specify a gradient for the needle"
 				},
+
 				"default": "rgba(255,160,122,.9)"
 			},
 
@@ -336,6 +355,7 @@
 				{
 					"doc": "Color of the title"
 				},
+
 				"default": "#888"
 			},
 
@@ -346,6 +366,7 @@
 				{
 					"doc": "Color of the value text"
 				},
+
 				"default": "#444"
 			},
 
@@ -356,6 +377,7 @@
 				{
 					"doc": "Color of the value text shadow. If not specified then there will be no shadow"
 				},
+
 				"default": "rgba(0,0,0,0.3)"
 			},
 
@@ -506,135 +528,179 @@
 
 		"ValueBoxOptions": 
 		{
-			"valueBox": {
+			"valueBox": 
+			{
 				"type": "boolean",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Flag to indicate if the value box should be shown or not"
 				},
+
 				"default": true
 			},
-			
-			"valueInt": {
+
+			"valueInt": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Number of digits for the integer part of the value"
 				},
+
 				"default": 3
 			},
-			
-			"valueDec": {
+
+			"valueDec": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Number of digits for the decimal part of the value"
 				},
+
 				"default": 2
 			}
 		},
-		
-		"NeedleOptions": {
-			"needle": {
+
+		"NeedleOptions": 
+		{
+			"needle": 
+			{
 				"type": "boolean",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Flag to indicate if the needle should be drawn"
 				},
+
 				"default": true
 			},
-			
-			"needleShadow": {
+
+			"needleShadow": 
+			{
 				"type": "boolean",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Flag to indicate if the needle shadow should be drawn"
 				},
+
 				"default": true
 			},
-			
-			"needleType": {
+
+			"needleType": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Can be either 'line' or 'arrow'"
 				},
+
 				"default": "arrow",
-				"values": [
+				"values": 
+				[
 					"arrow",
 					"line"
 				]
 			}
 		},
-		
-		"BorderOptions": {
-			"borders": {
+
+		"BorderOptions": 
+		{
+			"borders": 
+			{
 				"type": "boolean",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Flag to indicate if borders should be drawn"
 				},
+
 				"default": true
 			},
-			
-			"borderOuterWidth": {
+
+			"borderOuterWidth": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Sets the outer width of the border in pixels. If 0, then no border will be drawn"
 				}
 			},
-			
-			"borderMiddleWidth": {
+
+			"borderMiddleWidth": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Sets the middle width of the border in pixels. If 0, then no border will be drawn"
 				}
 			},
-					
-			"borderInnerWidth": {
+
+			"borderInnerWidth": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Sets the inner width of the border in pixels. If 0, then no border will be drawn"
 				}
 			},
-					
-			"borderShadowWidth": {
+
+			"borderShadowWidth": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Sets the width of the outer border drop shadow. If 0, then no shadow will be drawn"
 				}
 			}
-					
 		},
-		
-		"FontOptions": {
-			"fontNumbers": {
+
+		"FontOptions": 
+		{
+			"fontNumbers": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font family to be used for the tick numbers"
 				}
 			},
-			
-			"fontNumbersSize": {
+
+			"fontNumbersSize": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font size to be used for the tick numbers in relative units"
 				}
 			},
-			
-			"fontNumbersStyle": {
+
+			"fontNumbersStyle": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font style to be used for the tick numbers"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"italic",
 					"oblique"
 				]
 			},
-			
-			"fontNumbersWeight": {
+
+			"fontNumbersWeight": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font weight to be used for the tick numbers"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"bold",
 					"bolder",
@@ -650,41 +716,53 @@
 					"900"
 				]
 			},
-			
-			"fontTitle": {
+
+			"fontTitle": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font family to be used for the title text"
 				}
 			},
-			
-			"fontTitleSize": {
+
+			"fontTitleSize": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font size to be used for the title in relative units"
 				}
 			},
-			
-			"fontTitleStyle": {
+
+			"fontTitleStyle": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font style to be used for the title"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"italic",
 					"oblique"
 				]
 			},
-			
-			"fontTitleWeight": {
+
+			"fontTitleWeight": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font weight to be used for the title"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"bold",
 					"bolder",
@@ -700,41 +778,53 @@
 					"900"
 				]
 			},
-			
-			"fontUnits": {
+
+			"fontUnits": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font family to be used for the units"
 				}
 			},
-			
-			"fontUnitsSize": {
+
+			"fontUnitsSize": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font size to be used for the units in relative units"
 				}
 			},
-			
-			"fontUnitsStyle": {
+
+			"fontUnitsStyle": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font style to be used for the units"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"italic",
 					"oblique"
 				]
 			},
-			
-			"fontUnitsWeight": {
+
+			"fontUnitsWeight": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font weight to be used for the units"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"bold",
 					"bolder",
@@ -750,41 +840,53 @@
 					"900"
 				]
 			},
-			
-			"fontValue": {
+
+			"fontValue": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font family to be used for the value"
 				}
 			},
-			
-			"fontValueSize": {
+
+			"fontValueSize": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font size to be used for the value in relative units"
 				}
 			},
-			
-			"fontValueStyle": {
+
+			"fontValueStyle": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font style to be used for the value"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"italic",
 					"oblique"
 				]
 			},
-			
-			"fontValueWeight": {
+
+			"fontValueWeight": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The font weight to be used for the value"
 				},
+
 				"default": "normal",
-				"values": [
+				"values": 
+				[
 					"normal",
 					"bold",
 					"bolder",
@@ -800,9 +902,8 @@
 					"900"
 				]
 			}
-			
 		},
-		
+
 		"TitleOptions": 
 		{
 			"text": 
@@ -840,133 +941,173 @@
 				"type": "format"
 			}
 		},
-		
-		"LinearGaugeOptions": {
-			"borderRadius": {
+
+		"LinearGaugeOptions": 
+		{
+			"borderRadius": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "The radius for rounded corners of the gauge plate and its borders"
 				}
 			},
-			
-			"barBeginCircle": {
+
+			"barBeginCircle": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines if a gauge bar should start with a circle element imitating flask view of the bar. If set to zero it won’t be drawn at all"
 				}
 			},
-			
-			"barLength": {
+
+			"barLength": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines bar length (in percent) in relation to overall gauge length"
 				}
 			},
-			
-			"colorBarEnd": {
+
+			"colorBarEnd": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "If given, bar background will be drawn as gradient. If null or undefined, bar color will be solid"
 				}
 			},
-			
-			"colorBarProgressEnd": {
+
+			"colorBarProgressEnd": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "If given, progress bar background will be drawn as gradient. If null or undefined, progress bar color will be solid"
 				}
 			},
-			
-			"tickSide": {
+
+			"tickSide": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a side on which ticks bar should be drawn"
 				},
+
 				"default": "both",
-				"values": [
+				"values": 
+				[
 					"both",
 					"left",
 					"right"
 				]
 			},
-			
-			"needleSide": {
+
+			"needleSide": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a side on which the needle should be drawn"
 				},
+
 				"default": "both",
-				"values": [
+				"values": 
+				[
 					"both",
 					"left",
 					"right"
 				]
 			},
-			
-			"numbersSide": {
+
+			"numbersSide": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a side on which the numbers should be drawn"
 				},
+
 				"default": "both",
-				"values": [
+				"values": 
+				[
 					"both",
 					"left",
 					"right"
 				]
 			},
-			
-			"ticksWidth": {
+
+			"ticksWidth": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a length of major ticks width in relative units"
 				}
 			},
-			
-			"ticksWidthMinor": {
+
+			"ticksWidthMinor": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a length of minor tick lines width in relative units"
 				}
 			},
-			
-			"ticksPadding": {
+
+			"ticksPadding": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a padding used for drawing ticks out of a bar, in relative units"
 				}
-			}		
+			}
 		},
-		
-		"RadialGaugeOptions": {
-			"ticksAngle": {
+
+		"RadialGaugeOptions": 
+		{
+			"ticksAngle": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a max angle for ticks bar"
 				},
+
 				"default": 270
 			},
-			
-			"startAngle": {
+
+			"startAngle": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines a start angle for the start of the ticks bar"
 				},
+
 				"default": 45
 			},
-			
-			"barStartPosition": {
+
+			"barStartPosition": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Enable anti-clockwise progress bars and middle start point progress bars"
 				},
+
 				"default": "left",
-				"values": [
+				"values": 
+				[
 					"left",
 					"right"
 				]
 			},
-						
+
 			"colorNeedleCircleOuter": 
 			{
 				"type": "color",
@@ -1003,14 +1144,17 @@
 				}
 			},
 
-			"needleCircleSize": {
+			"needleCircleSize": 
+			{
 				"type": "int",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines the size in relative units of the decorative circles element of the gauge"
 				},
+
 				"default": 45
 			},
-			
+
 			"needleCircleInner": 
 			{
 				"type": "boolean",
@@ -1018,6 +1162,7 @@
 				{
 					"doc": "Turns on/off inner decorative circle element drawing"
 				},
+
 				"default": true
 			},
 
@@ -1028,21 +1173,26 @@
 				{
 					"doc": "Turns on/off outer decorative circle element drawing"
 				},
+
 				"default": true
 			},
 
-			"animationTarget": {
+			"animationTarget": 
+			{
 				"type": "string",
-				"tags": {
+				"tags": 
+				{
 					"doc": "Defines which part of the gauge should be animated when changing the value"
 				},
+
 				"default": "needle",
-				"values": [
+				"values": 
+				[
 					"needle",
 					"plate"
 				]
 			},
-						
+
 			"useMinPath": 
 			{
 				"type": "boolean",
@@ -1050,9 +1200,9 @@
 				{
 					"doc": "Applicable only to radial gauges which have full 360-degree ticks plate. If set to true, the gauge will rotate needle/plate by a minimal rotation path"
 				},
+
 				"default": true
 			}
-		
 		}
 	}
 }
